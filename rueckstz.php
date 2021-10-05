@@ -33,7 +33,7 @@ else{
 		}
 	}
 	if($found){
-		$ret = $db->query("update tokens set ended=datetime('now'), is_active=0  where is_active=1");
+		$ret = $db->query("update tokens set ended=datetime('now','localtime'), is_active=0  where is_active=1");
 		print("<h3>alle tokens auf beendet gesetzt!</h3>");
 	}
 	else{
